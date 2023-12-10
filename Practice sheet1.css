@@ -1,0 +1,26 @@
+p,a
+{
+    color: green;
+}
+
+.special
+{
+    color: orange;
+    font-weight: bold;
+}
+
+span.special,li.special
+{
+color: blue;
+font-weight: bold;
+}
+
+li{
+    color: pink;
+}
+
+a:hover{
+    color: saddlebrown;
+    text-decoration: none;
+
+}
