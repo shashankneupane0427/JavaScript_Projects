@@ -22,5 +22,13 @@ li{
 a:hover{
     color: saddlebrown;
     text-decoration: none;
-
+}
+.background{
+    background-image: url("sample\ img.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: left;
+    background-attachment: fixed;
+   height: 1000px;
+   width: 2000px;
 }
