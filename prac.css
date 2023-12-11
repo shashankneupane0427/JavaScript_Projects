@@ -1,0 +1,28 @@
+.heading{
+    text-align: center;
+    color: brown;
+    text-shadow: 1px 1px 2px brown;
+    background-color: cadetblue;
+
+}
+div{
+
+    padding: 20px;
+    border: 10px solid black;
+    margin: 20px;
+}
+.box1bBox2{
+    height:100px;
+    width:100px;
+}
+.box1{
+    margin:30px;
+    background-color: aquamarine;
+}
+.box2{
+    padding: 30px;
+    background-color: blueviolet;
+}
+.wrapper{
+    background-color: brown;
+}
