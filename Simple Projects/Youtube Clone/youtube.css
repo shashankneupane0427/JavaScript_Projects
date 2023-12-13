@@ -1,12 +1,21 @@
 .thumbnail{
     width: 300px;
-    object-fit: cover;
+    display: block;
 
 }
 .search-bar{
-   
+   display:block
 }
 
 .video-title{
     width: 300px;
+}
+
+.video-author,
+.video-stats{
+
+}
+.video-preview{
+    width: 300px;
+    display: inline-block;
 }
