@@ -11,12 +11,18 @@
     margin-top: 0;
     font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 12px;
 
 }
 
 .video-author,
 .video-stats{
-
+    font-size: 12px;
+    color: #606060;;
+}
+.vide-authir{
+    margin-bottom: 4px;
 }
 .video-preview{
     width: 300px;
@@ -43,5 +49,7 @@
 }
 p{
     font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
 
 }
