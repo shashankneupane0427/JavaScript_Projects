@@ -4,11 +4,14 @@
 
 }
 .search-bar{
-   display:block
+   display: block;
 }
 
 .video-title{
-    width: 300px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+
 }
 
 .video-author,
@@ -18,4 +21,27 @@
 .video-preview{
     width: 300px;
     display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+     
+}
+.channel-picture{
+    display: inline-block;
+    width:50px;
+    vertical-align: top;
+}
+.video-info{
+    display: inline-block;
+    width: 200px;
+}
+.profile-picture{
+    width: 40px;
+    border-radius: 50px;
+}
+.thumbnail-row{
+    margin-bottom: 12px;
+}
+p{
+    font-family: Roboto, Arial;
+
 }
