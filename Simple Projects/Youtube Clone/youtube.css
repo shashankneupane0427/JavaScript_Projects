@@ -1,9 +1,26 @@
-.thumbnail{
-    width: 100%;
-}
-
+/*HEADER CSS*/
 .search-bar{
    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*GENERAL CSS*/
+p{
+font-family: Roboto, Arial;
+margin-top: 0;
+margin-bottom: 0;
+
+}
+/*VIDEO CSS*/
+.thumbnail{
+    width: 100%;
 }
 
 .video-title{
@@ -49,10 +66,4 @@
 }
 .thumbnail-row{
     margin-bottom: 12px;
-}
-p{
-    font-family: Roboto, Arial;
-    margin-top: 0;
-    margin-bottom: 0;
-
 }
