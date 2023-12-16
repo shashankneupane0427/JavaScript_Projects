@@ -27,6 +27,7 @@
     border-bottom-width: 1px ;
     border-bottom-style: solid;
     border-bottom-color: rgb(229, 228, 228);
+    z-index: 100;
  }
 .left-section{
     display: flex;
@@ -54,11 +55,13 @@
     height: 24px;
     margin-left: 24px;
     margin-right: 24px;
+    cursor: pointer;
     
 
 }
 .youtube-logo{
     height: 20px;
+    cursor: pointer;
 }
 .search-button{
     height: 40px;
@@ -67,6 +70,7 @@
     border: 1px solid #cccccc;
     margin-left: -1px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .voice-button{
     height: 40px;
@@ -74,38 +78,85 @@
     border-radius: 20px;
     border: none;
     background-color: rgb(248, 245, 245);
+    cursor: pointer;
 }
 .search-icon{
     height: 25px;
     margin-top: 4px;
+    cursor: pointer;
 
 }
 .voice-icon{
     height: 24px;
     margin-top: 4px;
+    cursor: pointer;
 
 }
 .upload-icon{
     height: 24px;
+    cursor: pointer;
 }
 .youtube-app{
     height: 24px;
+    cursor: pointer;
 }
 .notification-icon{
     height: 24px;
+    cursor: pointer;
+}
+.notification-icon-container{
+    position: relative;
+}
+.notification-count{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(169, 8, 8);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .user-picture{
     height: 32px;
     border-radius: 16px;
+    cursor: pointer;
 }
 .sidebar{
     position: fixed;
     left: 0;
     bottom:0;
     top:55px;
-    background-color: black;
+    background-color: white;
     width: 72px;
+    z-index: 200;
+    padding-top: 5px;
 }
+.sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.sidebar-link:hover{
+    background-color: rgb(221, 218, 218);
+}
+.sidebar-link img{
+    height: 24px;
+    margin-bottom: 4px;
+}
+.sidebar-link div{
+    font-family: Roboto, Arial;
+    font-size: 10px;
+}
+
 
 /*GENERAL CSS*/
 p{
@@ -117,13 +168,16 @@ margin-bottom: 0;
 body{
     margin: 0;
     padding-top: 80px;
-    padding-left: 80px;
+    padding-left: 96px;
+    padding-right: 24px;
+    background-color: rgb(248, 248, 248);
 }
 
 
 /*VIDEO CSS*/
 .thumbnail{
     width: 100%;
+    cursor: pointer;
 }
 
 .video-title{
@@ -131,7 +185,8 @@ body{
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
 
 }
 
@@ -139,6 +194,7 @@ body{
 .video-stats{
     font-size: 12px;
     color: #606060;
+    cursor: pointer;
 }
 .vide-author{
     margin-bottom: 4px;
@@ -146,7 +202,7 @@ body{
 
 .video-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 40px;
 }
@@ -154,20 +210,42 @@ body{
 .video-info-grid{
     display: grid;
     grid-template-columns: 50px 1fr;
+    cursor: pointer;
 }
 
 .channel-picture{
     width:50px;
     vertical-align: top;
+    cursor: pointer;
 }
 .video-info{
     width: 200px;
 }
 .profile-picture{
-    width: 40px;
+    width: 36px;
     border-radius: 50px;
+    cursor: pointer;
     
 }
 .thumbnail-row{
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.video-time{
+    color: white;
+    background-color: black;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+
+
+
 }
