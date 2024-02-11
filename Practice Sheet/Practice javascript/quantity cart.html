@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Quantity</title>
-   
+    <title>cart quantity</title>
 </head>
 <body>
     <button onclick="
-        console.log(`Cart Quantity: ${cartQuantity}`);">
-    Show Quantity</button>
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+    ">Show Quantity</button>
 
     <button onclick="
-        cartQuantity = cartQuantity + 1;
-        cartQuantity++; //shortcut for line 15
-        console.log(`Cart Quantity: ${cartQuantity}`);">
-    Add to cart</button>
+        cartQuantity++;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    
+    ">Add to Cart</button>
+ 
+    <button onclick="
+        cartQuantity=cartQuantity + 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    
+    ">+2</button>
 
     <button onclick="
-        cartQuantity+=2;
-        console.log(`Cart Quantity: ${cartQuantity}`);">
-    +2</button>
+        cartQuantity= cartQuantity + 3;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        
+    ">+3</button>
 
     <button onclick="
-        cartQuantity = cartQuantity + 3;
-        console.log(`Cart Quantity: ${cartQuantity}`);">
-    +3</button>
+        cartQuantity= 0;
+        console.log('Cart was reset');
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    
+    ">Reset Cart</button>
 
     <button onclick="
-        cartQuantity = 0;
-        console.log('Cart was reset.')
-        console.log(`Cart Quantity: ${cartQuantity}`);">
-    Reset Cart</button>
+        cartQuantity+=4;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    
+    ">+4</button>
 
-     <script>
-        let cartQuantity = 0;
-     </script>
+    <button onclick="
+        cartQuantity+=5;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+    ">+5</button>
+
+    <button onclick="
+    cartQuantity-=2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+
+    ">-2</button>
+   
 </body>
+
+<script>
+    let cartQuantity = 0;
+    
+</script>
 </html>
