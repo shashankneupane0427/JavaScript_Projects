@@ -1,66 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Cart Quantity</title>
-  </head>
-  <body>
-    <button onclick="
-      console.log(`Cart quantity: ${cartQuantity}`);
-    ">Show Quantity</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
 
-    <button onclick="
-     updateCartQuantity(1);
-    ">Add to Cart</button>
+        p{
+            font-family: Arial;
+            text-align: center;
+            color:gray;
+        }
 
-    <button onclick="
-      updateCartQuantity(2);
-    ">+2</button>
+        div{
+            background-color: whitesmoke;
+            display: inline-block;
+            margin-left: 30px;
+            margin-top: 30px;
+            padding: 18px;
+        }
 
-    <button onclick="
-     updateCartQuantity(3);
-    ">+3</button>
+        button{
+            background-color: lightgreen;
+            border: none;
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+        }
 
-    <button onclick="
-      updateCartQuantity(4);
-    ">+4</button>
+        button:hover{
+            background-color: lightgray;
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Cart Quantity</p>
+        <button
+            onclick="
+            play(1)
+        ">+1</button>
 
-    <button onclick="
-      updateCartQuantity(5);
-    ">+5</button>
+        <button
+            onclick="
+            play(2)
+        ">+2</button>
 
-   
-    <button onclick="
-      updateCartQuantity(-1);
-    ">Remove from cart</button>
+        <button 
+            onclick="
+            play(-1)
+        ">-1</button>
 
-    <button onclick="
-      updateCartQuantity(-2);
-    ">-2</button>
+        <button 
+            onclick="
+            play(-2)
+        ">-2</button>
 
-    <button onclick="
-      updateCartQuantity(-3);
-    ">-3</button>
-    
-    <button onclick="
-      cartQuantity = 0;
-      console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);
-    ">Reset Cart</button>
+        <button
+            onclick="
+            play(0)
+        ">Reset</button>
+    </div>
 
     <script>
-      let cartQuantity = 0;
-      function updateCartQuantity(value){
-        if (cartQuantity + value > 10) {
-            alert('The cart is full');
+        const disk = JSON.parse(localStorage.getItem('disk')) || {
+        cart: 0
+      };
+
+      function play(value){
+        if(value === 1){
+            if(disk.cart >= 10){
+                alert("Cart is full!");
+            }
+            else{
+            disk.cart+=1;
+            }
         }
-        else if (cartQuantity + value < 0) {
-            alert('The cart is empty');
-        } 
-      else {
-        cartQuantity=cartQuantity+value;
-        console.log(`Cart quantity: ${cartQuantity}`);
-      }
+        else if(value === 2){
+            if(disk.cart >= 10){
+                alert("Cart is full!");
+            }
+            else{
+            disk.cart+=2;
+            }
+        }
+        else if(value === -1){
+            if(disk.cart <= 0){
+                alert("Cart is empty!");
+            }
+            else{
+            disk.cart-=1;
+            }
+        }
+        else if(value === -2){
+            if(disk.cart <= 0){
+                alert("Cart is empty!");
+            }
+            else{
+            disk.cart-=2;
+            }
+        }
+        else if(value === 0){
+            disk.cart=0;
+            alert("Cart has been reset!");
+        }
+        console.log(disk);
+        localStorage.setItem('disk', JSON.stringify(disk));
       }
     </script>
-  </body>
+</body>
 </html>
