@@ -7,16 +7,21 @@
     <p>Rock Paper Scissors</p>
     <button onclick="
       playGame('rock');
+      gamePlayJS();
     ">Rock</button>
 
     <button onclick="
       playGame('paper');
+      gamePlayJS();
     ">Paper</button>
 
     <button onclick="
       playGame('scissors');
+      gamePlayJS();
     ">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
     <p class="js-score"></p>
 
     <button onclick="
@@ -24,6 +29,7 @@
       score.losses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
+      updateScoreElement();
     ">Reset Score</button>
 
     <script>
@@ -32,6 +38,8 @@
         losses: 0,
         ties: 0
       };
+
+      updateScoreElement();
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -76,8 +84,21 @@
 
         localStorage.setItem('score', JSON.stringify(score));
 
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-      Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        updateScoreElement();
+
+
+        document.querySelector('.js-moves')
+        .innerHTML = `You ${playerMove}. Computer ${computerMove}`;
+
+        document.querySelector(',js-result')
+        .innerHTML = result;
+
+      }
+
+      function updateScoreElement() {
+        document.querySelector('.js-score')
+        .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
       }
 
       function pickComputerMove() {
@@ -95,9 +116,10 @@
 
         return computerMove;
       }
-      // DOM MANUPULAION:
-      document.querySelector('.js-score')
-      .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
+
+
+      
+      
 
     </script>
   </body>
