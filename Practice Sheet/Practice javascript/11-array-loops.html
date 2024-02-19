@@ -11,9 +11,24 @@
     <button onclick="
         addTodo();
     ">Add</button>
+    <div class="js-todo-list"></div>
 
     <script>
         const todoList = [];
+        renderTOdoList();
+        function renderTOdoList () {
+            let todoListHTML = '';
+            for(let i=0; i < todoList.length; i++){
+                const todo = todoList[i];
+                const html = `<p>${todo}</p>`;
+                todoListHTML += html;
+            }
+            console.log(todoListHTML);
+
+            document.querySelector('.js-todo-list')
+            .innerHTML = todoListHTML;
+            }
+       
 
         function addTodo() {
             const inputElement = document.querySelector('.js-name-input');
@@ -22,7 +37,9 @@
             todoList.push(name);
             console.log(todoList);
 
+
             inputElement.value = '';
+            renderTOdoList();
         }
     </script>
 </body>
