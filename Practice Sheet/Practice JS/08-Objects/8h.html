@@ -2,7 +2,7 @@
 <html>
   <head></head>
   <body>
-    <!-- Code changes are at the bottom. -->
+   
     <p>
       <button onclick="
         updateCalculation('1');
@@ -67,14 +67,11 @@
       ">.</button>
 
       <button onclick="
-        // Note: eval() takes a string and runs it as code.
-        // Avoid using eval() in real world projects since
-        // it can potentially be given harmful code to run.
-        // Only use eval() for learning purposes.
+        
         calculation = eval(calculation);
         console.log(calculation);
 
-        // Remember to save the calculation here.
+        
         localStorage.setItem('calculation', calculation);
       ">=</button>
 
@@ -88,7 +85,7 @@
         calculation = '';
         console.log(calculation);
 
-        // Remember to save the calculation here.
+       
         localStorage.setItem('calculation', calculation);
       ">Clear</button>
     </p>
@@ -102,8 +99,7 @@
         localStorage.setItem('calculation', calculation);
       }
 
-      // Optional: you can also create a function in order
-      // to reuse this code.
+     
       function saveCalculation() {
         localStorage.setItem('calculation', calculation);
       }

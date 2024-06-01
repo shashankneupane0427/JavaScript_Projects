@@ -4,7 +4,7 @@
     <title>DOM Projects</title>
   </head>
   <body>
-    <!-- Answer is at the bottom. -->
+    
     <p>Amazon Shipping Calculator</p>
     <input placeholder="Cost of order" class="js-cost-input" onkeydown="
       handleCostKeydown(event);
@@ -21,22 +21,18 @@
         }
       }
 
-      /*
-       * Issue = the calculation is inaccurate.
-       * Fix = calculate the number in cents and then
-       *       convert back to dollars at the end.
-       */
+     
       function calculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
 
-        // Convert the numbers to cents by * 100.
+        
         let cost = Number(inputElement.value) * 100;
 
         if (cost < 4000) {
           cost = cost + 1000;
         }
 
-        // Convert back to dollars at the end.
+       
         document.querySelector('.js-total-cost')
           .innerHTML = `$${cost / 100}`;
       }
