@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      calculation += '1';
+      console.log(calculation);
+    ">1</button>
+
+    <button onclick="
+      calculation += '2';
+      console.log(calculation);
+    ">2</button>
+
+    <button onclick="
+      calculation += '3';
+      console.log(calculation);
+    ">3</button>
+
+    <button onclick="
+      calculation += ' + ';
+      console.log(calculation);
+    ">+</button>
+
+    <button onclick="
+      // Note: eval() takes a string and runs it as code.
+      // Avoid using eval() in real world projects since
+      // it can potentially be given harmful code to run.
+      // Only use eval() for learning purposes.
+      calculation = eval(calculation);
+      console.log(calculation);
+    ">=</button>
+
+    <script>
+      let calculation = '';
+    </script>
+  </body>
+</html>
