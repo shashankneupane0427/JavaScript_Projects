@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+   <style>
+    body{
+      background-color: rgba(20, 80, 20, 0.562);
+      font-family: sans-serif;
+      color: rgb(60, 60, 60)
+    };
+
+    
+   </style>
+</head>
+
+<body>
+  <h1> <% if(locals.number){ %>
+   The length of your name is of <%= number %> letters!
+    <% } else { %>
+      <h1>Enter your name below 👇</h1>
+      <% } %>
+  </h1> 
+
+  <form action="/submit" method="POST">
+    <input type="text" name="fName" placeholder="First name">
+    <input type="text" name="lName" placeholder="Last name">
+    <input type="submit" value="OK">
+  </form>
+</body>
+
+</html>
